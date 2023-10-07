@@ -1,0 +1,61 @@
+<script>
+	import { onMount } from 'svelte'
+	import Typewriter from 'svelte-typewriter'
+
+
+    const play = () => {
+        window.removeEventListener('click', play)
+        const audio = new Audio('/assets/her.mp3')
+        audio.loop = true
+        audio.play()
+    }
+
+    onMount(() => {
+        window.addEventListener('click', play)
+        return () => {
+            window.removeEventListener('click', play)
+        }
+    })
+
+    
+</script>
+
+<img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1]" src='/assets/metame.png' alt='Meta Me' />
+<div class="typer mx-auto h-full container flex flex-col gap-10 items-center justify-center">
+	<Typewriter mode="loop" interval={120}>
+        <h2>Master...</h2>
+        <h2>SvelteKit</h2>
+        <h2>SkeletonUI</h2>
+        <h2>LiveKit</h2>
+        <h2>TypeScript</h2>
+        <h2>Tailwind</h2>
+        <h2>SupaBase</h2>
+        <h2>Welcome to...</h2>
+		<h2>Miss Litty's Kitty </h2>
+	</Typewriter>
+    <div class="card variant-soft-surface p-10">
+	    <header class="card-header">
+            <h3 class='h4'>Welcome to BrightSide Developer's Latest Creation!</h3>
+        </header>
+	    <section class="p-4 max-w-[30rem] mx-auto">
+            <p class="text-center">Miss Litty's Kitty is the Ultimate Tech Stack to Develop High Quality Social Applications at Rapid Speeds. </p>
+        </section>
+    </div>
+    <div class="hover:scale-105 transition-transform">
+        <a href="/sign-up" class="btn btn-xl variant-glass-primary cursor-pointer">Join Now!</a>
+    </div>
+</div>
+<!-- ZS5V0PjibePMhjNP -->
+<style>
+	.typer {
+		--cursor-color: #d41876;
+		--cursor-width: 3px;
+	}
+	h2 {
+		font-size: 72px;
+		background: -webkit-linear-gradient(45deg, #ebb305, #d41876);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		padding-bottom: 1rem;
+	}
+</style>
