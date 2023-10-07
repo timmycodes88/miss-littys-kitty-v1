@@ -13,13 +13,14 @@
 		<AppBar background='bg-surface-500/50 backdrop-blur' shadow='shadow-xl'>
 			<svelte:fragment slot="lead">
 				<strong class="text-xl uppercase">
-                    <span class="hidden md:inline">Miss Litty's Kitty</span>
-                    <span class="md:hidden">Ms Lit Kit</span>
+                    Miss Litty's Kitty
                 </strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<div class="hover:scale-105 transition-transform">
-                    <a href="/?sign-up" class="btn variant-filled-secondary cursor-pointer">Create <span class='hidden md:inline'>&nbsp;an Account</span></a>
+                    <a href="/?sign-up" class="btn variant-filled-secondary cursor-pointer">
+                        Create<span class='hidden md:inline'>&nbsp;an Account</span>
+                    </a>
                 </div>
 			</svelte:fragment>
 		</AppBar>
