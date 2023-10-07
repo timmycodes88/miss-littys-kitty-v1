@@ -1,39 +1,39 @@
 <script lang='ts'>
-	import { onMount } from 'svelte'
+	import { onDestroy, onMount } from 'svelte'
 	import Typewriter from 'svelte-typewriter'
 
+    let hasEntered = false
     let audio: HTMLAudioElement
 
     const play = () => {
-        window.removeEventListener('click', play)
         audio = new Audio('/assets/her.mp3')
         audio.loop = true
         audio.play()
+        hasEntered = true
     }
-
-    onMount(() => {
-        window.addEventListener('click', play)
-        return () => {
-            audio.pause()
-            window.removeEventListener('click', play)
-        }
-    })
-
-    
+    onMount(() => () => audio.pause())
 </script>
 
+{#if !hasEntered}
+    <div class="absolute inset-0 flex items-center justify-center bg-black z-10">
+        <button on:click={play} class="text-white">
+            Enter the Portal
+        </button>
+    </div>
+
+{:else}
 <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1]" src='/assets/metame.png' alt='Meta Me' />
 <div class="typer mx-auto h-full container flex flex-col gap-6 md:gap-10 items-center justify-center">
 	<Typewriter mode="loop" interval={120}>
         <h2 class="text-[45px] md:text-[72px]">Master...</h2>
         <h2 class="text-[45px] md:text-[72px]">SvelteKit</h2>
-        <h2 class="text-[45px] md:text-[72px]">SkeletonUI</h2>
-        <h2 class="text-[45px] md:text-[72px]">LiveKit</h2>
-        <h2 class="text-[45px] md:text-[72px]">TypeScript</h2>
-        <h2 class="text-[45px] md:text-[72px]">Tailwind</h2>
         <h2 class="text-[45px] md:text-[72px]">SupaBase</h2>
+        <h2 class="text-[45px] md:text-[72px]">LiveKit</h2>
+        <h2 class="text-[45px] md:text-[72px]">Tailwind</h2>
+        <h2 class="text-[45px] md:text-[72px]">TypeScript</h2>
+        <h2 class="text-[45px] md:text-[72px]">All-in-one Kit</h2>
         <h2 class="text-[45px] md:text-[72px]">Welcome to...</h2>
-		<h2 class="text-[45px] md:text-[72px]">Miss Litty's Kitty </h2>
+		<h2 class="text-[45px] md:text-[72px]">Miss Litt Kittt</h2>
 	</Typewriter>
     <div class="card variant-soft-surface p-4 md:p-10 mx-2">
 	    <header class="card-header">
@@ -44,9 +44,13 @@
         </section>
     </div>
     <div class="hover:scale-105 transition-transform">
-        <a href="/?sign-up" class="btn btn-xl variant-glass-primary cursor-pointer">Join Now!</a>
+        <a href="/sign-up" class="btn btn-xl variant-glass-primary cursor-pointer">Join Now!</a>
     </div>
 </div>
+{/if}
+
+
+
 <!-- ZS5V0PjibePMhjNP -->
 <style>
 	.typer {

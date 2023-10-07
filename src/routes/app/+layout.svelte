@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 
 	// Floating UI for Popups
@@ -12,7 +11,7 @@
 	<svelte:fragment slot="header">
 		<AppBar background='bg-surface-500/50 backdrop-blur' shadow='shadow-xl'>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Miss Litty's Kitty</strong>
+				<strong class="text-xl uppercase">Miss Litt Kittt</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<strong>Hello SvelteKit</strong>

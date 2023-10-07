@@ -1,8 +1,5 @@
 <script lang="ts">
-	import '../../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-
-	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
@@ -10,15 +7,15 @@
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<AppBar background='bg-surface-500/50 backdrop-blur' shadow='shadow-xl'>
+		<AppBar background='variant-surface-500/50 backdrop-blur' shadow='shadow-xl'>
 			<svelte:fragment slot="lead">
 				<strong class="text-xl uppercase">
-                    Miss Litty's Kitty
+                    Miss Litt Kittt
                 </strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<div class="hover:scale-105 transition-transform">
-                    <a href="/?sign-up" class="btn variant-filled-secondary cursor-pointer">
+                    <a href="/sign-up" class="btn variant-filled-secondary cursor-pointer">
                         Create<span class='hidden md:inline'>&nbsp;an Account</span>
                     </a>
                 </div>
