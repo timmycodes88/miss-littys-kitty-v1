@@ -1,11 +1,12 @@
-<script>
+<script lang='ts'>
 	import { onMount } from 'svelte'
 	import Typewriter from 'svelte-typewriter'
 
+    let audio: HTMLAudioElement
 
     const play = () => {
         window.removeEventListener('click', play)
-        const audio = new Audio('/assets/her.mp3')
+        audio = new Audio('/assets/her.mp3')
         audio.loop = true
         audio.play()
     }
@@ -13,6 +14,7 @@
     onMount(() => {
         window.addEventListener('click', play)
         return () => {
+            audio.pause()
             window.removeEventListener('click', play)
         }
     })
