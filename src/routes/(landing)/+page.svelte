@@ -44,7 +44,7 @@
         </section>
     </div>
     <div class="hover:scale-105 transition-transform">
-        <a href="/sign-up" class="btn btn-xl variant-glass-primary cursor-pointer">Join Now!</a>
+        <a href="/?sign-up" class="btn btn-xl variant-glass-primary cursor-pointer">Join Now!</a>
     </div>
 </div>
 <!-- ZS5V0PjibePMhjNP -->

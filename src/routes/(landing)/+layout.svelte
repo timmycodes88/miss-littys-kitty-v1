@@ -19,7 +19,7 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<div class="hover:scale-105 transition-transform">
-                    <a href="/sign-up" class="btn variant-filled-secondary cursor-pointer">Create <span class='hidden md:inline'>&nbsp;an Account</span></a>
+                    <a href="/?sign-up" class="btn variant-filled-secondary cursor-pointer">Create <span class='hidden md:inline'>&nbsp;an Account</span></a>
                 </div>
 			</svelte:fragment>
 		</AppBar>
